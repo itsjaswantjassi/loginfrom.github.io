@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN FORM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-div {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        .box {
+            width: 501px;
+            height: 321px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+        }
+
+        .box h1 {
+            margin-bottom: 30px;
+            color: #fff;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .inputbox {
+            position: relative;
+        }
+
+        .inputbox input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            background-color: transparent;
+            outline: none;
+        }
+
+        .box .inputbox label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            letter-spacing: 1px;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            transition: 0.05s;
+        }
+
+        [type="submit"] {
+            background: transparent;
+            border: none;
+            outline: none;
+            counter-reset: #fff;
+            background: #03a9f4;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .inputbox input:focus~label,
+        .inputbox input:valid~label {
+
+            top: -20px;
+            left: 0;
+            color: #03a9f4;
+        }
+
+        [type="submit"]:hover {
+            background-color: aquamarine;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .box {
+                width: 360px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-div">
+        <div class="box">
+            <form action="">
+                <h1>login form</h1>
+                <div class="inputbox">
+
+                    <input type="text" name="username" autocomplete="off" required>
+                    <label>Username</label>
+                </div>
+                <div class="inputbox">
+                    <input type="password" name="password" autocomplete="off" required>
+                    <label>password</label>
+                </div>
+                <input type="submit" name="" value="login">
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
